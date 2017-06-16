@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+void test(int* a){
+	*a=*a+3;
+	cout<<*a<<endl;
+}
+
+int main(){
+	int a=5;
+	int* b=&a;
+	cout<<a<<endl;
+	test(b);
+	cout<<a<<endl;
+	
+	return 0;
+}
+//output:5 8 8
+//指標變數存地址(b)
+//找a的位址: &a
+//指標b中的內容: *b
